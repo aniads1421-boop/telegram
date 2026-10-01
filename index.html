@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sahil Official</title>
+    <style>
+        /* Basic Page Setup with a Lighter Background Overlay for Maximum Visibility */
+        body {
+            background: linear-gradient(rgba(10, 10, 10, 0.4), rgba(10, 10, 10, 0.4)), url('sahil.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Profile Picture with Glow */
+        .profile-pic-container {
+            position: relative;
+            width: 160px;
+            height: 160px;
+            margin-bottom: 15px;
+        }
+        .profile-pic {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 4px solid #ccff00; /* Yellow-Green border */
+            box-shadow: 0 0 25px #ccff00; /* Strong neon glow */
+            object-fit: cover;
+        }
+
+        /* Text Styles with Sharp Neon Glow Effects */
+        h1.name {
+            color: #ffff00; /* Ultra Bright Yellow */
+            font-size: 36px;
+            margin: 0 0 5px 0;
+            font-weight: 800;
+            /* Sharp multi-layer neon glow */
+            text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00, 0 0 30px #ff9900, 0 2px 5px rgba(0, 0, 0, 1);
+        }
+        
+        p.members {
+            color: #00ffcc; /* Bright Cyan Glow */
+            font-size: 19px;
+            font-weight: 700;
+            margin-top: 5px;
+            margin-bottom: 25px;
+            text-shadow: 0 0 10px #00ffcc, 0 0 20px rgba(0, 255, 204, 0.6), 0 2px 5px rgba(0, 0, 0, 1);
+        }
+
+        /* Tag Styles with Dark Backdrop and Glow */
+        .tags {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 35px;
+        }
+        .tag {
+            border: 1.5px solid #ff3366; /* Sharp Pink-Red border */
+            color: #ff3366;
+            padding: 9px 22px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 800;
+            text-transform: uppercase;
+            background: rgba(0, 0, 0, 0.9);
+            box-shadow: 0 0 15px rgba(255, 51, 102, 0.5), 0 4px 12px rgba(0, 0, 0, 0.8);
+            text-shadow: 0 0 8px rgba(255, 51, 102, 0.8);
+        }
+
+        /* Stat Boxes */
+        .stats-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+            width: 100%;
+            max-width: 400px;
+        }
+        .stat-box {
+            background: rgba(15, 15, 15, 0.9);
+            padding: 20px;
+            border-radius: 15px;
+            border: 1.5px solid rgba(255, 255, 255, 0.3);
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(6px);
+        }
+        .stat-box h2 {
+            color: #00ff66; /* Neon Green Glow for numbers */
+            font-size: 26px;
+            margin: 0;
+            font-weight: 800;
+            text-shadow: 0 0 10px rgba(0, 255, 102, 0.8), 0 2px 5px rgba(0, 0, 0, 0.9);
+        }
+        .stat-box p {
+            color: #ffffff;  
+            font-size: 13px;
+            font-weight: 700;
+            margin: 5px 0 0 0;
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+        }
+
+        /* Animated Join Button (Small-Big Pulse) */
+        .telegram-btn {
+            background: linear-gradient(90deg, #28a745, #dc3545); /* Green to Red */
+            color: white;
+            padding: 18px 45px;
+            text-decoration: none;
+            font-weight: 800;
+            border-radius: 12px;
+            font-size: 20px;
+            display: inline-block;
+            margin-bottom: 50px;
+            transition: transform 0.2s;
+            box-shadow: 0 0 20px rgba(40, 167, 69, 0.8), 0 5px 20px rgba(0, 0, 0, 0.6);
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+            
+            /* Animation */
+            animation: pulseButton 2s infinite;
+        }
+
+        /* Pulse Keyframes */
+        @keyframes pulseButton {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.06); } /* Slightly bigger */
+            100% { transform: scale(1); }
+        }
+
+        .telegram-btn:hover {
+            transform: scale(1.08); /* Extra scale on hover */
+            box-shadow: 0 0 30px rgba(220, 53, 69, 1), 0 8px 25px rgba(0, 0, 0, 0.9);
+        }
+
+        /* Footer */
+        .footer-icons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            color: #ffffff;
+            font-size: 13px;
+            font-weight: 700;
+            width: 100%;
+            max-width: 500px;
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+        }
+        .icon-item {
+            text-align: center;
+        }
+        .icon-item span {
+            font-size: 24px; /* Emoji size */
+            display: block;
+            margin-bottom: 5px;
+            filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.5));
+        }
+
+        .footer-text {
+            margin-top: 30px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #ffffff;
+            line-height: 1.4;
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Profile Picture Section -->
+    <div class="profile-pic-container">
+        <img src="sahil.jpg" alt="Sahil Official" class="profile-pic">
+    </div>
+
+    <!-- Name and Members -->
+    <h1 class="name">🏏 Sahil Official</h1>
+    <p class="members">👥 49K+ Active Members</p>
+
+    <!-- Tags -->
+    <div class="tags">
+        <span class="tag">🏆 Elite Analyst</span>
+        <span class="tag">⚡ Live Updates</span>
+    </div>
+
+    <!-- Stats Section -->
+    <div class="stats-container">
+        <div class="stat-box">
+            <h2>25,892</h2>
+            <p>Match Tips</p>
+        </div>
+        <div class="stat-box">
+            <h2>99%</h2>
+            <p>Win Rate</p>
+        </div>
+        <div class="stat-box">
+            <h2>4.9<span style="color: #ffcc00; text-shadow: 0 0 10px #ffcc00;">★</span></h2>
+            <p>Rating</p>
+        </div>
+    </div>
+
+    <!-- Telegram Link Button -->
+    <a href="https://t.me/+ryB1NeyX3sxkZTVl" class="telegram-btn">Join Telegram Channel</a>
+
+    <!-- Footer Icons -->
+    <div class="footer-icons">
+        <div class="icon-item">
+            <span>✅</span> Verified
+        </div>
+        <div class="icon-item">
+            <span>🔒</span> Secure
+        </div>
+        <div class="icon-item">
+            <span>📈</span> Profitable
+        </div>
+        <div class="icon-item">
+            <span>⭐</span> Top Rated
+        </div>
+    </div>
+
+    <!-- Footer Text -->
+    <p class="footer-text">
+        © 2026 sahil official. All rights reserved.<br>
+        Professional Cricket, Tennis Analysis & Predictions
+    </p>
+
+</body>
+</html>
